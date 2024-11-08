@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Hide Search Result",
+    "version": "1.0",
+    "permissions": ["contextMenus", "storage", "activeTab", "scripting", "webNavigation"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "host_permissions": ["*://*/*"],
+    "icons": {
+      "16": "icons/no-internet.png",
+      "48": "icons/no-internet.png",
+      "128": "icons/no-internet.png"
+    },
+    "action": {
+      "default_icon": {
+        "16": "icons/no-internet.png",
+        "48": "icons/no-internet.png",
+        "128": "icons/no-internet.png"
+      },
+      "default_title": "Hide Search Result"
+    }
+  }
+  
